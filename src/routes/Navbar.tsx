@@ -19,7 +19,7 @@ export const Navbar = () => {
             <nav className="navbar">
                 <Link className="navbar__logo" 
                     to="/">
-                        <h3>TV and Films</h3>
+                        <h3>Features</h3>
                 </Link>
                 <aside 
                     className="navbar__icon"
