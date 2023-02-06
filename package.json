@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/craigdev937/tvshowsandfilms1.git"
   },
-  "keywords": [],
+  "keywords": ["React", "The Movie Database (TMDB)", "TypeScript", "Webpack", "React Router", "Redux Toolkit", "createAsyncThunk", "Fetch API"],
   "author": "",
   "license": "ISC",
   "bugs": {
