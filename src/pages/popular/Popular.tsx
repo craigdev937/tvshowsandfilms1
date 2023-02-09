@@ -2,6 +2,7 @@ import React from "react";
 import "./Popular.css";
 import { useAppSelector, useAppDispatch } from "../../global/Reducer";
 import { API } from "../../global/FetchAPI";
+import { Film } from "../../components/Film";
 
 export const Popular = () => {
     const dispatch = useAppDispatch();
@@ -20,7 +21,7 @@ export const Popular = () => {
         <React.Fragment>
             {films.map((film) => (
                 <section key={film.id}>
-                    <h1>{film.title}</h1>
+                    <Film key={film.id} film={film} />
                 </section>
             ))}
         </React.Fragment>
