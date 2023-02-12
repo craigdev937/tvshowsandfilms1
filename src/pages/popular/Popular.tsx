@@ -1,6 +1,6 @@
 import React from "react";
 import "./Popular.css";
-import { useAppSelector, useAppDispatch } from "../../global/Reducer";
+import { useAppSelector, useAppDispatch } from "../../global/Hooks";
 import { API } from "../../global/FetchAPI";
 import { Film } from "../../components/Film";
 
