@@ -1,8 +1,10 @@
-export interface ITrending {
+export interface IMedia {
     adult: boolean,
     backdrop_path: string,
     id: number,
+    imdb_id: string,
     title: string,
+    homepage: string,
     original_language: string,
     original_title: string,
     overview: string,
@@ -16,8 +18,15 @@ export interface ITrending {
     vote_count: number
 };
 
-export interface ITrendState {
-    films: ITrending[],
+export interface IMediaState {
+    films: IMedia[],
+    loading: boolean,
+    error: Error | null
+};
+
+export interface ISearchState {
+    searchText: string,
+    searches: IMedia[],
     loading: boolean,
     error: Error | null
 };

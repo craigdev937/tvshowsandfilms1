@@ -2,7 +2,7 @@ import React from "react";
 import "./Popular.css";
 import { useAppSelector, useAppDispatch } from "../../global/Hooks";
 import { API } from "../../global/FetchAPI";
-import { Film } from "../../components/Film";
+import { MediaCard } from "../../components/MediaCard";
 
 export const Popular = () => {
     const dispatch = useAppDispatch();
@@ -19,9 +19,9 @@ export const Popular = () => {
 
     return (
         <React.Fragment>
-            {films.map((film) => (
-                <section key={film.id}>
-                    <Film key={film.id} film={film} />
+            {films.map((media) => (
+                <section key={media.id}>
+                    <MediaCard key={media.id} media={media} />
                 </section>
             ))}
         </React.Fragment>

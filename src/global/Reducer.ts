@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TrendingReducer } from "./TrendingSlice";
+import { SearchReducer } from "./SearchSlice";
 
 export const Reducer = configureStore({
     reducer: {
         films: TrendingReducer,
+        searches: SearchReducer,
     },
 });
 
