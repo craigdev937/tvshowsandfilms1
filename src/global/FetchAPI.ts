@@ -2,10 +2,10 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const URL = "https://api.themoviedb.org/3";
 class FetchClass {
-    getFilms = createAsyncThunk("films/getFilms", 
+    getTrending = createAsyncThunk("films/getFilms", 
     async () => {
         const res: Response = await fetch(
-            `${URL}/trending/movie/week?api_key=${
+            `${URL}/trending/all/day?api_key=${
                 process.env.API_KEY}`
         );
         if (!res.ok) throw new Error(res.statusText);

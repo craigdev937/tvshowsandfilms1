@@ -6,12 +6,12 @@ import { MediaCard } from "../../components/MediaCard";
 
 export const Popular = () => {
     const dispatch = useAppDispatch();
-    const error = useAppSelector((state) => state.films.error);
-    const loading = useAppSelector((state) => state.films.loading);
-    const films = useAppSelector((state) => state.films.films);
+    const error = useAppSelector((state) => state.tmedia.error);
+    const loading = useAppSelector((state) => state.tmedia.loading);
+    const tmedia = useAppSelector((state) => state.tmedia.tmedia);
 
     React.useEffect(() => {
-        dispatch(API.getFilms());
+        dispatch(API.getTrending());
     }, [dispatch]);
 
     if (loading) return <h1>Loading...</h1>;
@@ -19,7 +19,7 @@ export const Popular = () => {
 
     return (
         <React.Fragment>
-            {films.map((media) => (
+            {tmedia.map((media) => (
                 <section key={media.id}>
                     <MediaCard key={media.id} media={media} />
                 </section>

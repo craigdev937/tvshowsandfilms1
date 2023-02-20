@@ -1,31 +1,31 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { API } from "./FetchAPI";
-import { IMedia, IMediaState } from "../models/Interfaces";
+import { TMedia, TMediaState } from "../models/Interfaces";
 
-const initialState: IMediaState = {
-    films: [],
+const initialState: TMediaState = {
+    tmedia: [],
     loading: false,
     error: null
 };
 
 const TrendingSlice = createSlice({
-    name: "films",
+    name: "tmedia",
     initialState: initialState,
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(API.getFilms.rejected.type, 
-        (state, action: PayloadAction<IMediaState>) => {
+        builder.addCase(API.getTrending.rejected.type, 
+        (state, action: PayloadAction<TMediaState>) => {
             state.loading = false,
             state.error = action.payload.error
         }),
-        builder.addCase(API.getFilms.pending, (state) => {
+        builder.addCase(API.getTrending.pending, (state) => {
             state.loading = true,
             state.error = null
         }),
-        builder.addCase(API.getFilms.fulfilled, 
-        (state, action: PayloadAction<IMedia[]>) => {
+        builder.addCase(API.getTrending.fulfilled, 
+        (state, action: PayloadAction<TMedia[]>) => {
             state.loading = false,
-            state.films = [...action.payload]
+            state.tmedia = [...action.payload]
         })
     },
 });

@@ -1,9 +1,9 @@
 import React from "react";
-import { IMedia } from "../models/Interfaces";
-const imgURL = "https://image.tmdb.org/t/p/w500"
+import { TMedia } from "../models/Interfaces";
+const imgURL = "https://image.tmdb.org/t/p/w300";
 
 type MED = {
-    media: IMedia
+    media: TMedia
 };
 
 export const MediaCard = ({media}: MED) => {
@@ -12,7 +12,7 @@ export const MediaCard = ({media}: MED) => {
             <h1>{media.title}</h1>
             <img 
                 alt={media.title} 
-                src={`${imgURL}/${media.backdrop_path}`} 
+                src={`${imgURL}/${media.poster_path}`} 
             />
         </React.Fragment>
     );

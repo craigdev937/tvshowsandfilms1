@@ -4,7 +4,7 @@ import { SearchReducer } from "./SearchSlice";
 
 export const Reducer = configureStore({
     reducer: {
-        films: TrendingReducer,
+        tmedia: TrendingReducer,
         searches: SearchReducer,
     },
 });

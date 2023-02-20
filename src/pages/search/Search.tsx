@@ -1,6 +1,5 @@
 import React from "react";
 import "./Search.css";
-import { Link, useParams } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../global/Hooks";
 import { API } from "../../global/FetchAPI";
 import { MediaCard } from "../../components/MediaCard";
@@ -8,8 +7,6 @@ import { MediaCard } from "../../components/MediaCard";
 export const Search = () => {
     const [query, setQuery] = React.useState("");
     const dispatch = useAppDispatch();
-    // let { searchText } = useParams();
-    // const query = searchText !== undefined ? String() : "";
     const error = useAppSelector((state) => state.searches.error);
     const loading = useAppSelector((state) => state.searches.loading);
     const searches = useAppSelector((state) => state.searches.searches);
@@ -45,7 +42,9 @@ export const Search = () => {
             <section>
                 {searches.map((media) => (
                     <aside key={media.id}>
-                        <MediaCard key={media.id} media={media} />
+                        <MediaCard 
+                            key={media.id} media={media} 
+                        />
                     </aside>
                 ))}
             </section>

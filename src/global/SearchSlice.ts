@@ -1,9 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { API } from "./FetchAPI";
-import { IMedia, ISearchState } from "../models/Interfaces";
+import { TMedia, ISearchState } from "../models/Interfaces";
 
 const initialState: ISearchState = {
-    searchText: "",
     searches: [],
     loading: false,
     error: null
@@ -12,11 +11,7 @@ const initialState: ISearchState = {
 const SearchSlice = createSlice({
     name: "search",
     initialState: initialState,
-    reducers: {
-        setSearchText: (state, action: PayloadAction<string>) => {
-            state.searchText = action.payload
-        },
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder.addCase(API.searchList.rejected.toString(), 
         (state, action: PayloadAction<ISearchState>) => {
@@ -28,14 +23,13 @@ const SearchSlice = createSlice({
             state.error = null
         }),
         builder.addCase(API.searchList.fulfilled.type, 
-        (state, action: PayloadAction<IMedia[]>) => {
+        (state, action: PayloadAction<TMedia[]>) => {
             state.loading = false,
             state.searches = [...action.payload]
         })
     }
 });
 
-export const { setSearchText } = SearchSlice.actions;
 export const SearchReducer = SearchSlice.reducer;
 
 

@@ -1,10 +1,8 @@
-export interface IMedia {
+export interface TMedia {
     adult: boolean,
     backdrop_path: string,
     id: number,
-    imdb_id: string,
     title: string,
-    homepage: string,
     original_language: string,
     original_title: string,
     overview: string,
@@ -18,15 +16,14 @@ export interface IMedia {
     vote_count: number
 };
 
-export interface IMediaState {
-    films: IMedia[],
+export interface TMediaState {
+    tmedia: TMedia[],
     loading: boolean,
     error: Error | null
 };
 
 export interface ISearchState {
-    searchText: string,
-    searches: IMedia[],
+    searches: TMedia[],
     loading: boolean,
     error: Error | null
 };
