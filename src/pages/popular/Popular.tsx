@@ -1,8 +1,10 @@
 import React from "react";
 import "./Popular.css";
+import { Link } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../global/Hooks";
 import { API } from "../../global/FetchAPI";
 import { MediaCard } from "../../components/MediaCard";
+import { PopCard } from "../../components/PopCard";
 
 export const Popular = () => {
     const dispatch = useAppDispatch();
@@ -20,9 +22,7 @@ export const Popular = () => {
     return (
         <React.Fragment>
             {tmedia.map((media) => (
-                <section key={media.id}>
-                    <MediaCard key={media.id} media={media} />
-                </section>
+                <PopCard key={media.id} media={media} />
             ))}
         </React.Fragment>
     );

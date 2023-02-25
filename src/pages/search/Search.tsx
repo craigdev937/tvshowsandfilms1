@@ -20,6 +20,7 @@ export const Search = () => {
     (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         dispatch(API.searchList(query));
+        setQuery("");
     };
 
     if (loading) return <h1>Loading...</h1>;
