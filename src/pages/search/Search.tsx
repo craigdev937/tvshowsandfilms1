@@ -2,7 +2,7 @@ import React from "react";
 import "./Search.css";
 import { useAppSelector, useAppDispatch } from "../../global/Hooks";
 import { API } from "../../global/FetchAPI";
-import { MediaCard } from "../../components/MediaCard";
+import { SearchCard } from "../../components/SearchCard";
 
 export const Search = () => {
     const [query, setQuery] = React.useState("");
@@ -43,7 +43,7 @@ export const Search = () => {
             <section>
                 {searches.map((media) => (
                     <aside key={media.id}>
-                        <MediaCard 
+                        <SearchCard 
                             key={media.id} media={media} 
                         />
                     </aside>

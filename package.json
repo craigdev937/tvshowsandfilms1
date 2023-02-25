@@ -11,7 +11,16 @@
     "type": "git",
     "url": "git+https://github.com/craigdev937/tvshowsandfilms1.git"
   },
-  "keywords": ["React", "The Movie Database (TMDB)", "TypeScript", "Webpack", "React Router", "Redux Toolkit", "createAsyncThunk", "Fetch API"],
+  "keywords": [
+    "React",
+    "The Movie Database (TMDB)",
+    "TypeScript",
+    "Webpack",
+    "React Router",
+    "Redux Toolkit",
+    "createAsyncThunk",
+    "Fetch API"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -24,7 +33,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.8.0"
+    "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.19",
@@ -42,6 +51,3 @@
     "webpack-dev-server": "^4.11.1"
   }
 }
-
-
-

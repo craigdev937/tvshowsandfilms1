@@ -1,9 +1,7 @@
 import React from "react";
 import "./Popular.css";
-import { Link } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../global/Hooks";
 import { API } from "../../global/FetchAPI";
-import { MediaCard } from "../../components/MediaCard";
 import { PopCard } from "../../components/PopCard";
 
 export const Popular = () => {
@@ -22,7 +20,9 @@ export const Popular = () => {
     return (
         <React.Fragment>
             {tmedia.map((media) => (
-                <PopCard key={media.id} media={media} />
+                <aside key={media.id}>
+                    <PopCard media={media} />
+                </aside>
             ))}
         </React.Fragment>
     );

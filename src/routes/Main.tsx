@@ -7,7 +7,7 @@ import { Search } from "../pages/search/Search";
 import { Popular } from "../pages/popular/Popular";
 import { Films } from "../pages/films/Films";
 import { TVShows } from "../pages/tvshows/TVShows";
-import { Details } from "../components/Details";
+import { Media } from "../pages/media/Media";
 
 const RRouter = createBrowserRouter([
     {
@@ -19,6 +19,11 @@ const RRouter = createBrowserRouter([
                 path: "/",
                 element: <Popular />,
                 errorElement: <NotFound />
+            },
+            {
+                path: "/media/:id",
+                element: <Media />,
+                
             },
             {
                 path: "/films",
@@ -33,11 +38,6 @@ const RRouter = createBrowserRouter([
             {
                 path: "/search",
                 element: <Search />,
-                errorElement: <NotFound />
-            },
-            {
-                path: "/details/:id",
-                element: <Details />,
                 errorElement: <NotFound />
             }
         ]
