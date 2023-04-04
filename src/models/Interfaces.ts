@@ -28,4 +28,9 @@ export interface ISearchState {
     error: Error | null
 };
 
+export type MovieID = number;
+
+export interface FavoriteState {
+    favorites:  MovieID[]
+};
 

@@ -62,6 +62,14 @@ export const Navbar = () => {
                             >Search
                         </Link>
                     </li>
+                    <li className="navbar__item">
+                        <Link 
+                            className="navbar__link" 
+                            to="/fav" 
+                            onClick={closeMenu}
+                            >Favorites
+                        </Link>
+                    </li>
                 </ul>
             </nav>
             <Outlet />
