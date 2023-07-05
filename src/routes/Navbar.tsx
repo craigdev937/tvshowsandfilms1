@@ -30,14 +30,14 @@ export const Navbar = () => {
                     className={open ? 
                     "navbar__links active" : 
                     "navbar__links"}>
-                    <li className="navbar__item">
+                    {/* <li className="navbar__item">
                         <Link 
                             className="navbar__link" 
                             to="/" 
                             onClick={closeMenu}
                             >Popular
                         </Link>
-                    </li>
+                    </li> */}
                     <li className="navbar__item">
                         <Link 
                             className="navbar__link" 

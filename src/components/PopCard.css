@@ -1,0 +1,10 @@
+.pop__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.pop__card {
+    display: flex;
+    flex-direction: column;
+}
